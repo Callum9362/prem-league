@@ -1,4 +1,5 @@
 import NavLink from './NavLink'
+import Dropdown from './Dropdown'
 import { useRouter } from 'next/router'
 
 const Navigation = () => {
@@ -12,36 +13,117 @@ const Navigation = () => {
                     <div className="flex">
                         {/* Navigation Links */}
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <NavLink
-                                href="/"
-                                active={router.pathname === '/'}
-                            >
-                                Premier League
-                            </NavLink>
-                            <NavLink
-                                href="/"
-                                active={router.pathname === '/'}
-                            >
-                                Fantasy
-                            </NavLink>
+                            
+                            {/* Premier League Dropdown */}
+                            <div className="hidden sm:flex sm:items-center sm:ml-6">
+                                <Dropdown
+                                    align="right"
+                                    width="48"
+                                    trigger={
+                                        <button className="inline-flex text-white items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out">
+                                            Premier League
+                                            <div className="ml-1">
+                                                <svg
+                                                    className="fill-current h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    }
+                                    children={["Link 1", "Link 2", "Link 3"]}
+                                    >
+                                </Dropdown>
+                            </div>
+                        
+                            {/* Fantasy Dropdown */}
+                            <div className="hidden sm:flex sm:items-center sm:ml-6">
+                                <Dropdown
+                                    align="right"
+                                    width="48"
+                                    trigger={
+                                        <button className="inline-flex text-white items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out">
+                                            Fantasy
+                                            <div className="ml-1">
+                                                <svg
+                                                    className="fill-current h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    }>
+                                </Dropdown>
+                            </div>
+                            
+
                             <NavLink
                                 href="/"
                                 active={router.pathname === '/'}
                             >
                                 Video
                             </NavLink>
-                            <NavLink
-                                href="/"
-                                active={router.pathname === '/'}
-                            >
-                                Communities
-                            </NavLink>
-                            <NavLink
-                                href="/"
-                                active={router.pathname === '/'}
-                            >
-                                More
-                            </NavLink>
+
+                            {/* Communities Dropdown */}
+                            <div className="hidden sm:flex sm:items-center sm:ml-6">
+                                <Dropdown
+                                    align="right"
+                                    width="48"
+                                    trigger={
+                                        <button className="inline-flex text-white items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out">
+                                            Communities
+                                            <div className="ml-1">
+                                                <svg
+                                                    className="fill-current h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    }>
+                                </Dropdown>
+                            </div>
+
+                            {/* More Dropdown */}
+                            <div className="hidden sm:flex sm:items-center sm:ml-6">
+                                <Dropdown
+                                    align="right"
+                                    width="48"
+                                    trigger={
+                                        <button className="inline-flex text-white items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out">
+                                            Communities
+                                            <div className="ml-1">
+                                                <svg
+                                                    className="fill-current h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    }>
+                                </Dropdown>
+                            </div>
+
                         </div>
                     </div>
                 </div>
