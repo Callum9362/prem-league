@@ -1,5 +1,6 @@
 import NavLink from './NavLink'
 import Dropdown from './Dropdown'
+import { DropdownButton } from './DropdownLink'
 import { useRouter } from 'next/router'
 
 const Navigation = () => {
@@ -36,8 +37,40 @@ const Navigation = () => {
                                             </div>
                                         </button>
                                     }
-                                    children={["Link 1", "Link 2", "Link 3"]}
                                     >
+                                    <DropdownButton>
+                                        Home
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                        Fixtures
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                        Results
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                        Tables
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                        Awards
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                        Hall of Fame
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                       Transfers
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                       Broadcast
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                       Tickets
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                       Clubs
+                                    </DropdownButton>
+                                    <DropdownButton>
+                                       Players
+                                    </DropdownButton>
                                 </Dropdown>
                             </div>
                         

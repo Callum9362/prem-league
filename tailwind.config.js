@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'epl-purple': '#4e0056'
+        'epl-purple': '#4e0056',
+        'epl-pink' : '#db2777'
       },
     },
   },
